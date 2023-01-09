@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+
+const show = new Schema({
+
+    name: String,
+    summary: String,
+    genre: String, 
+    img: String,
+    episodes: Number,
+});
+
+const Show = mongoose.model('Show', show, process.env.TV_SHOWS);
+
+module.exports = Show;
