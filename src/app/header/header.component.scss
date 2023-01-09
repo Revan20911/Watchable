@@ -1,0 +1,50 @@
+$font-header: Arial;
+$prim-dark: rgb(248, 226, 32);
+$font-size-med: 1.5rem;
+
+.navbar{
+    
+    font-family: $font-header;
+    background-color: $prim-dark ;
+    width: 100vmax;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    
+    h1{
+        text-align: left;
+    }
+
+    button-row{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    button{
+
+        font-size: $font-size-med;
+        margin: 8px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px transparent;
+        height: 5rem;
+    }
+
+    button:hover{
+        border-bottom: solid black;
+    }
+
+    input{
+
+        height: 1.5rem;
+        width: 20rem;
+        cursor: pointer;
+
+    }
+}

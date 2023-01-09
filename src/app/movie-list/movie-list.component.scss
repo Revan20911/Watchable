@@ -1,0 +1,38 @@
+$prim-dark: rgb(248, 226, 32);
+
+h1{
+    font-family: Arial;
+    color: white;
+    font-size: 400px;
+}
+
+.content-list{
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 17rem));
+    grid-template-rows: repeat(1, minmax(23rem, 15rem));
+
+    margin: 2rem;
+}
+
+.content-container{
+
+    height: 20rem;
+    width: 14rem;
+    background-color: $prim-dark;
+
+    img{
+        object-fit: fill;
+    }
+
+    a, a:link, a:visited{
+
+        text-decoration: none;
+    }
+
+    h3{
+        text-align: center;
+        margin: 10px auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
