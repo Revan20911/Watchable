@@ -8,7 +8,8 @@ import { movies } from './movies';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent {
-
+  
+  // TODO: Fetch movies using back-end connection for database
   movies = movies;
   
 
