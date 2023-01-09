@@ -6,6 +6,8 @@ export interface Movie{
 
 };
 
+// Placeholder values until backend is setup and DB is populated
+
 export const movies = [
     {
         id:1,
