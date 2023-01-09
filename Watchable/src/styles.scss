@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(58, 58, 58));
+
+    a, a:visited,a:link{
+
+        text-decoration: none;
+        color:black;
+    } 
+}
