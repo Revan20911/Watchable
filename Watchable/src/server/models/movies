@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+// TODO: Adjust models to match interface parameters
+
 const movie = new Schema({
 
     name: String,

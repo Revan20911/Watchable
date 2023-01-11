@@ -8,7 +8,7 @@ const routes: Routes = [];
 @NgModule({
   imports: [RouterModule.forRoot([
     {path: '', component: HomeComponent},
-    {path: 'movies', component: MovieListComponent},
+    {path: 'search/:SearchText', component: MovieListComponent},
     //{path: 'Movies/:movieId', component: MovieDetailsComponent},
   ])],
   exports: [RouterModule]

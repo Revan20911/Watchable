@@ -8,8 +8,12 @@
         <button type="button" routerLink="movies" routerLinkActive="active">Movies</button>
     </div>
     <div class="button-row">
-        <button type="button" (click)="null">Search</button>
-        <input type="text">
+        <button type="button" (click)="search(SearchText)" routerLink="search/SearchText" routerLinkActive="active" >Search</button>
+        <input type="text" id="SearchText" name="SearchText" [(ngModel)] = "SearchText" >
     </div>
     <button type="button" (click)="null">log in</button>
+</div>
+
+<div *ngFor="let result of results">
+    <h1>{{result.name}}</h1>
 </div>
