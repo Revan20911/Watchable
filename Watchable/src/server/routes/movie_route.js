@@ -4,6 +4,9 @@ const movie_route = express.Router();
 const ObjectId = require("mongodb").ObjectId;
 const Movie = require("../models/movies");
 
+
+//TODO: Adjust routes to include API URL
+
 movie_route.get('/movies', async (req, res) => {
   const response = await Movie.find()
   res.json(response);

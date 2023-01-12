@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 
-import { movies } from './movies';
 
 @Component({
   selector: 'app-movie-list',
@@ -8,9 +8,21 @@ import { movies } from './movies';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent {
+
+  constructor (private route: ActivatedRoute){}
+
+  ngOnInit() {
+
+    this.route.queryParams.subscribe(params =>{
+
+    })
+
+    
+
+  }
   
-  // TODO: Fetch movies using back-end connection for database
-  movies = movies;
+
+  
   
 
 }

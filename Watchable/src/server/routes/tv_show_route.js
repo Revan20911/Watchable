@@ -4,6 +4,8 @@ const tv_show_route = express.Router();
 const ObjectId = require("mongodb").ObjectId;
 const Show = require("../models/tv_shows");
 
+//TODO: Adjust routes to include API URL
+
 tv_show_route.get('/TV_Shows', async (req, res) => {
   const response = await Show.find()
   res.json(response);
