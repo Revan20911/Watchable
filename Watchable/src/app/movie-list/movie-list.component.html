@@ -1,10 +1,15 @@
+<div class="theme-wrapper theme-light">
  <div class="content-list">
-    <!-- <div  *ngFor="let movie of movies">
-            <div class="content-container">
-                <img src="movie.img">
-                <a [title]="movie.name">
-                    <h3>{{movie.name}}</h3>
-                </a>
+
+    <div *ngFor="let result of results">
+        <a class="content-container" (click)="movieDetails(result.id, result.type)">
+            <img  srcset="{{result.image_url}}" alt="">
+            <div class="text">
+                <h1 id="title">{{result.name}}</h1>
+                <h2 id="type">{{result.type}}</h2>
+                <h2 id="year">{{result.year}}</h2>
             </div>
-    </div> -->
+        </a>
+    </div>
+</div>
 </div>

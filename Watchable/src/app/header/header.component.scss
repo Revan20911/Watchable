@@ -1,11 +1,9 @@
-$font-header: Arial;
-$prim-dark: rgb(248, 226, 32);
-$font-size-med: 1.5rem;
 
+@import 'src/styles';
 .navbar{
     
-    font-family: $font-header;
-    background-color: $prim-dark ;
+    font-family: 'Roboto', sans-serif;
+    
     width: 100vmax;
     height: 5rem;
     display: flex;
@@ -13,12 +11,54 @@ $font-size-med: 1.5rem;
     justify-content: space-evenly;
     align-items: center;
     top: 0;
+
+    @include customize(theme){
+        background-color: getValue(backgroundLight);
+        
+    };
     
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+        @include customize(theme){
+
+            color: getValue(bgFont);
+        }
+
+        span{
+
+            padding: 10px 0px;
+            margin-left: 5px;
+            @include customize(theme){
+
+                color: getValue(bgFont);
+            }
+        }
+
+        span:hover{
+
+            background-color: initial;
+            border: 1px solid transparent;
+        }
+
+        h1{
+            margin: auto;
+            font-weight: 500;
+        }
+    }
+     a,a:visited, a:link{
+
+            text-decoration: none;
+        }
     h1{
-        text-align: left;
+        text-align: center;
     }
 
-    button-row{
+    .button-row{
 
         display: flex;
         flex-direction: row;
@@ -26,25 +66,58 @@ $font-size-med: 1.5rem;
         align-content: center;
     }
 
-    button{
-
-        font-size: $font-size-med;
-        margin: 8px;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px transparent;
-        height: 5rem;
-    }
-
-    button:hover{
-        border-bottom: solid black;
-    }
-
     input{
 
-        height: 1.5rem;
-        width: 20rem;
+        height: 3rem;
+        width: 40rem;
         cursor: pointer;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        
+
+        font-size: 2rem;
 
     }
+
+    input:hover, input:active, input:focus, input:link, textarea:focus{
+        @include customize(theme){
+            border: 1px solid getValue(containerLight);
+            background-color: getValue(containerLight);
+        }
+        box-shadow: none;
+        outline: none;
+    }
 }
+
+span{
+
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    @include customize(theme){
+
+        color: getValue(bgFont);
+    }
+    
+}
+
+span:hover{
+
+    @include customize(theme){
+
+        border: 1px solid getValue(bgFont);
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+
+    font-size: 3rem;
+  }
