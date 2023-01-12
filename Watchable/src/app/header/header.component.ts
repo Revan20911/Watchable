@@ -1,30 +1,36 @@
 import { Component} from '@angular/core';
-import { MoviesService } from '../movies.service';
-import { Result } from '../movie-list/interfaces';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  providers: [MoviesService]
 })
 
 export class HeaderComponent {
 
-  constructor(private service: MoviesService){}
+  constructor(
+    private router: Router, 
+    private route: ActivatedRoute
+    ){}
 
   SearchText: string = '';
 
-  results: Result[] = [];
   search(SearchText: string){
 
     if(this.SearchText != ''){
 
-      this.service.getMovieTitle(SearchText)
-      .subscribe((res: any) =>{
+      this.router.navigate(['search/'], {
+        relativeTo: this.route,
+        queryParams:{
+          query: SearchText
+        },
+        queryParamsHandling: 'merge',
+        skipLocationChange: false
+      })
 
-        this.results = res;
-      });
+
+
       
     }else{
       console.log("Empty search term");

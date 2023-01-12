@@ -1,16 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+$themes : (
+    light:(
+        backgroundLight: #4144eb,
+        containerLight: #e1e0ff, 
+        bgFont: #ffffff,
+        contFont: #04006d,
+
+    ),
+);
+
+$color-schemes: (
+  scheme-default: (
+    backgroundColor: #00b4ff,
+  ),
+  scheme-cs1: (
+    backgroundColor: #e68a00,
+  )
+);
+
+
+
+@mixin customize($arg: theme){
+    $array: $themes;
+    $prefix: theme;
+
+    @if ($arg == theme){
+        $array: $themes;
+        $prefix: theme;
+
+    }@else{
+
+        $array: $color-schemes;
+        $prefix: color;
+    }
+
+    @each $theme, $map in $array{
+        .#{$prefix}-#{$theme} & {
+            $array-map: () !global;
+            @each $key, $submap in $map {
+              $value: map-get(map-get($array, $theme), '#{$key}');
+              $array-map: map-merge($array-map, ($key: $value)) !global;
+            }
+
+            @content;
+            $array-map: null !global;
+        }
+    }
+}
+@function getValue($key) {
+    @return map-get($array-map, $key);
+  }
 
 body{
     margin: 0;
     box-sizing: border-box;
 
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(58, 58, 58));
+    @include customize(color){
+        background-color: getValue(backgroundColor);
+    }
 
-    a, a:visited,a:link{
+    
 
-        text-decoration: none;
-        color:black;
-    } 
+  
 }

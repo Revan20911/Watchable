@@ -33,6 +33,16 @@ export interface Source{
 
 }
 
+export interface sourceList{
+
+    sources: Source[];
+}
+
+
+
+
+
+
 export interface Details{
 
     id: number,
@@ -62,4 +72,11 @@ export interface Details{
     trailer_thumbnail: string,
     relevance_percentile: number,
     sources: Source[]
+
+    
+}
+
+export interface DetailsArray{
+
+    details: Details[];
 }
