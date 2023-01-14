@@ -4,7 +4,7 @@
     
     font-family: 'Roboto', sans-serif;
     
-    width: 100vmax;
+    width: 100vw;
     height: 5rem;
     display: flex;
     flex-direction: row;
@@ -78,7 +78,6 @@
         margin: auto;
         border-radius: 10px;
         border: 1px solid transparent;
-
         font-family: 'Roboto', sans-serif;
         
 
@@ -126,4 +125,27 @@ span:hover{
     'opsz' 48;
 
     font-size: 3rem;
+    margin: auto;
+  }
+
+
+  @media (max-width: 1000px){
+
+    .navbar{
+        flex-direction: column;
+        height: fit-content;
+        justify-content: space-evenly;
+
+        .button-row{
+
+            margin-right: 5rem;
+        }
+
+        .logo{
+
+            margin-right: 3rem;
+        }
+    }
+
+
   }
