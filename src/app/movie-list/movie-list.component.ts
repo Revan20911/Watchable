@@ -61,12 +61,13 @@ export class MovieListComponent {
 
   }
 
-  movieDetails(id: number, type: string){
+  movieDetails(id: number, type: string, name: string){
 
       this.router.navigate(['details/'], {
         
         queryParams:{
-          id: id
+          id: id,
+          title: name,
         },
         queryParamsHandling: 'merge',
         skipLocationChange: false

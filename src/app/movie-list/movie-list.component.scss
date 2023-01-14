@@ -78,7 +78,7 @@ h1{
             flex-direction: row;
             text-align: left;
             @include customize(theme){
-                color: getValue(containerLight)
+                color: getValue(lightFont)
             }
 
             #type{

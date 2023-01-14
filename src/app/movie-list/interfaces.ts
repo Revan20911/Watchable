@@ -16,7 +16,6 @@ export interface resultList{
     results: Result[];
 }
 
-
 export interface Source{
 
     source_id: number,
@@ -37,11 +36,6 @@ export interface sourceList{
 
     sources: Source[];
 }
-
-
-
-
-
 
 export interface Details{
 
