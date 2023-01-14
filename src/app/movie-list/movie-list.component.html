@@ -1,7 +1,7 @@
 <div  class="theme-wrapper theme-light">
  <div class="content-list">
          
-        <a class="content-container" *ngFor="let result of results" (click)="movieDetails(result.id, result.type, result.name)">
+        <a class="content-container" *ngFor="let result of results" (click)="movieDetails(result.id, result.type, result.name, result.year, result.image_url)">
             <img  srcset="{{result.image_url}}" alt="">
             <div class="text">
                 <h1 id="title">{{result.name}}</h1>

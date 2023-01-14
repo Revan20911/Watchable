@@ -29,6 +29,8 @@
                 box-shadow: 0px 5px 4px 0px getValue(containerLight);
             }
 
+            font-size: 2rem;
+
             .image-container{
 
                 height: 5rem;
@@ -37,8 +39,8 @@
 
             img{
 
-                margin: 0; 
-                max-height: 20rem;
+                margin: 0 auto; 
+                max-height: 5rem;
                 max-width: 10rem;
                 min-height: 5rem;
 
@@ -46,22 +48,26 @@
 
         }
 
+        .source:hover{
+
+            cursor: pointer;
+            transform: scale(.98);
+            transition:   all 0.1s  ease-in-out;
+        }
+
     }
 
     .info-panel{
         
-        width: 25rem;
+        width: 23rem;
+        
+        
         @include customize(theme){
             background-color: getValue(containerLight);
             color: getValue(contFont)
-
         }
-
-        height: 100vh;
         z-index: -9999;
         padding: 0.5rem;
-
-
         h1{
             font-size: 3rem;
             margin: 0;
@@ -69,7 +75,18 @@
             
         }
 
+        h2{
 
+            margin: 0;
+            padding: 10px 20px;
 
+        }
+
+        img{
+
+            padding: 10px 20px;
+            width: 20rem;
+
+        }
     }
 }

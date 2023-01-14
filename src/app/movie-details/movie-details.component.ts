@@ -22,6 +22,9 @@ export class MovieDetailsComponent {
   sources: Source[] = [];
 
   title: string = '';
+  type: string = '';
+  year: number = 0;
+  img: string = '';
   
   constructor(
     private route: ActivatedRoute,
@@ -34,6 +37,9 @@ export class MovieDetailsComponent {
         this.route.queryParams.subscribe((params: Params) =>{
 
           this.title = params['title'];
+          this.year = params['year'];
+          this.type = params['type'];
+          this.img = params['img'];
 
               this.id = params['id'];
           
