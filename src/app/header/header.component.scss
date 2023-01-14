@@ -12,8 +12,11 @@
     align-items: center;
     top: 0;
 
+    
+
     @include customize(theme){
         background-color: getValue(backgroundLight);
+        box-shadow: 0px 3px 3px 2px getValue(containerLight);
         
     };
     
@@ -74,6 +77,8 @@
         margin: auto;
         border-radius: 10px;
         border: 1px solid transparent;
+
+        font-family: 'Roboto', sans-serif;
         
 
         font-size: 2rem;

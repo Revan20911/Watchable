@@ -5,7 +5,7 @@
 $themes : (
     light:(
         backgroundLight: #4144eb,
-        containerLight: #e1e0ff, 
+        containerLight: #ababac, 
         bgFont: #ffffff,
         contFont: #04006d,
 
@@ -57,6 +57,8 @@ $color-schemes: (
 body{
     margin: 0;
     box-sizing: border-box;
+    display: block;
+    
 
     @include customize(color){
         background-color: getValue(backgroundColor);

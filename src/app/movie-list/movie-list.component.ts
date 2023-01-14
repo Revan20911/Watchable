@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 import { MoviesService } from '../movies.service';
-import { resultList, Result } from './interfaces';
+import { Result } from './interfaces';
+
+import { movies } from '../tests_data/movies'; 
 
 
 @Component({
@@ -21,6 +23,8 @@ export class MovieListComponent {
     ){}
 
   // TODO: Pass search result info into component from header
+
+  movies = movies;
 
   searchQuery: string = '';
 
@@ -59,9 +63,7 @@ export class MovieListComponent {
 
   movieDetails(id: number, type: string){
 
-    if(type == 'tv_series'){
-
-      this.router.navigate(['tv_series/'], {
+      this.router.navigate(['details/'], {
         
         queryParams:{
           id: id
@@ -70,19 +72,4 @@ export class MovieListComponent {
         skipLocationChange: false
       })
     }
-
-    else if (type == 'movie'){
-
-      this.router.navigate(['movies/'], {
-        
-        queryParams:{
-          id: id
-        },
-        queryParamsHandling: 'merge',
-        skipLocationChange: false
-      })
-  
-    } 
-  }
-
 }

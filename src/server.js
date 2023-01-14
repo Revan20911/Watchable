@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   })
 
   app.get("/api/search/:query", async (req, res) => {
-    var requestUrl = `https://api.watchmode.com/v1/autocomplete-search/?apiKey=${process.env.KEY}&search_value=${req.params.query}&search_type=1`;
+    var requestUrl = `https://api.watchmode.com/v1/autocomplete-search/?apiKey=${process.env.KEY}&search_value=${req.params.query}&search_type=2`;
     const response = await fetch(requestUrl);
 
     const data = await response.json()
