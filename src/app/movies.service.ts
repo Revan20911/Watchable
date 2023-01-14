@@ -15,7 +15,7 @@ export class MoviesService {
 // Get search results 
   getMovieTitle(search_query: string, ):Observable<Result[]>{
 
-    return this.http.get<resultList>(`https://watchable-io.herokuapp.com//api/search/${search_query}`)
+    return this.http.get<resultList>(`https://watchable-io.herokuapp.com/api/search/${search_query}`)
     .pipe(map((response: resultList) => response.results ));
 
   }
@@ -24,7 +24,7 @@ export class MoviesService {
     title_id: number, 
     ): Observable<Source>{
       
-      return this.http.get<Source>(`https://watchable-io.herokuapp.com//api/details/${title_id}`);
+      return this.http.get<Source>(`https://watchable-io.herokuapp.com/api/details/${title_id}`);
 
     }
 
