@@ -145,12 +145,16 @@ export const sourceImages: sourceIMG[] = [
     },
     {
         name: 'Microsoft Store',
-        img_url: 'https://static.wikia.nocookie.net/logopedia/images/d/df/Microsoft_Store_2021_Light.svg/revision/latest/scale-to-width-down/250?cb=20220411094746'    
+        img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Microsoft_Store.svg/512px-Microsoft_Store.svg.png?20210606110516'    
     },
     {
         name: 'iTunes',
-        img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Crunchyroll_Logo.png/800px-Crunchyroll_Logo.png'    
+        img_url: 'https://1000logos.net/wp-content/uploads/2018/05/Itunes-logo.png'    
     },
+    {
+        name: 'VUDU',
+        img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Vudu_2014_logo.svg/300px-Vudu_2014_logo.svg.png?20150712094136'
+    }
     
 
 ]
